@@ -1,0 +1,365 @@
+Funcion ejercicio1_video1(0)
+	//ENTRADA: definimos variables:
+	//color como caracter
+	//PROCESO:
+	//color="verde"
+	//SALIDA:
+	//presentar color
+	Escribir "EJERCICIO 1";
+	Definir color Como Caracter
+	color="verde"
+	Escribir color
+	//ENTRADA: definimos variables:
+	//edad como entero
+	//PROCESO:
+	//edad=55
+	//SALIDA:
+	//presentar edad 
+	Definir edad Como Entero
+	edad=55
+	escribir edad 
+	//ENTRADA: definimos variables:
+	//activo como logico
+	//PROCESO:
+	//activo= Verdadero
+	//SALIDA:
+	//presentar activo
+	definir activo Como Logico
+	activo= Verdadero
+	Escribir activo
+FinFuncion
+
+
+Funcion ejercicio1(0)
+	//BOSQUEJO
+	//ENTRADA: definimos variables:
+	// edad=0?(leer)
+	//PROCESO:
+	// Solicitar al usuario que ingrese su edad
+	//SALIDA:
+	//Presentar la edad ingresada junto a un mensaje que diga "años"
+	Escribir "EJERCICIO 2";
+	Definir edad Como Entero;
+	Escribir "Qué edad tienes?";
+	Leer edad;
+	Escribir edad, " años";
+FinFuncion
+
+
+Funcion ejercicio2(0)
+	//ENTRADA: definimos variables:
+	//nombre como caracter
+	//PROCESO:
+	//nombre= "Juan"
+	//presentar nombre
+	//nombre="Diego"
+	//presentar nombre
+	//SALIDA:
+	//presentar nombre
+	Definir nombre Como Caracter
+	nombre= "Juan"
+	Escribir nombre
+	nombre="Diego"
+	Escribir nombre
+
+FinFuncion
+
+
+Funcion ejercicio3(0) 
+	//BOSQUEJO:
+	//ENTRADA: definimos variables:
+	// num1=0?(leer), num2=0?(leer), resultado=0?(calcular)
+	//PROCESO:
+	//Solicitar al usuario que ingrese el primer número
+	//Leer el primer numero ingresado
+	//Solicitar al usuario que ingrese el segundo número
+	// Leer el segundo número ingresado
+	//resultado <- num1 + num2
+	//SALIDA:
+	//Presentar el resultado de la suma de los números ingresados
+	Escribir "EJERCICIO 3";
+	Definir num1, num2, resultado Como Entero;
+	Escribir "INGRESA EL NÚMERO 1:";
+	Leer num1;
+	Escribir "INGRESA EL NÚMERO 2:";
+	Leer num2;
+	resultado <- num1 + num2;
+	Escribir resultado;
+FinFuncion
+
+
+Funcion ejercicio4(0)
+	//BOSQUEJO:
+	//ENTRADA: definir variable:
+	// edad=0
+	//PROCESO:
+	// Edad va a ser = 19
+	//Si edad >= 18:
+	//   presentar un mensaje "eres mayor de edad
+	//Sino se cumple
+	//   presentar un mensaje "no eres mayor de edad"
+	//SALIDA:
+	// Ya que la edad del usuario es 19, se cumple la condición de que la edad es mayor que 18, por lo que se
+	//presentara un mensaje "eres mayor de edad"
+	//Finsi
+	Escribir "EJERCICIO 4";
+	Definir edad Como Entero;
+	edad = 19;
+	Si edad >= 18 Entonces;
+		Escribir "Eres mayor de edad";
+	SiNo
+		Escribir "Eres menor de edad"
+	Fin Si
+FinFuncion
+
+
+Funcion ejercicio5(0)
+	//BOSQUEJO:
+	//ENTRADA: definimos variables:
+	// sed <- "si"
+	// dinero <-"si"
+	//PROCESO:
+	//Si sed = "si" y "dinero ="si":
+	//   Presentar "Compra una botella de agua"
+	//Sino 
+	//   Si sed = "no" y dinero ="si":
+	//   Presentar "compra un chocolate"
+	//Sino 
+	//   Presentar "no tienes dinero, ve para la casa...."
+	//FinSi
+	//SALIDA:
+	//Dependiendo del valor de cada variable se podrá determinar si se compra una botella de agua,
+	//si se compra un chocolate, o si se va para la casa
+	Escribir "EJERCICIO 5";
+	Definir sed, dinero Como Caracter
+	sed <- "si";
+	dinero <- "si";
+	Si (sed = "si") y (dinero = "si") Entonces;
+		Escribir "Compra una botella de agua";
+	SiNo
+		Si (sed = "no") y (dinero = "si") Entonces;
+			Escribir "Compra un chocolate";
+		SiNo
+			Escribir "No tienes dinero, ve para la casa...";
+		Fin Si
+	Fin Si
+FinFuncion
+
+
+Funcion ejercicio6(0) 
+	//BOSQUEJOS:
+	//ENTRADA: definimos variables:
+	//numAleatorio <- Aleatorio(0,10)
+	//En esta variable se generará de forma aleatoria un numero entre 0 y 10
+	//Definimos variables 
+	//numUsuario=0?
+	//Definimos variables:
+	//intentos <- 3
+	//PROCESO:
+	//Mientras intentos > 0 hacer 
+	//    Presentar "Ingresa un número del 0 al 10"
+	//Leer numUsuario
+	//Si numAleatorio = numUsuario:
+	//   Presentar "Wow, eres genial, el número es correcto! el número es: "
+	//SiNo
+	//   intentos = intentos - 1
+	//   Presentar "Perdedor, te quedan ", intentos, " intentos"
+	//FinSi
+	//Fin Mientras
+	//Si intentos = 0:
+	//   Presentar "Ya no te quedan intentos, perdiste!"
+	//Sino
+	//   Presentar "ganaste"
+	//FinSi
+	//SALIDA:
+	//Si el número ingresado por el usuario acIerta y es igual al número aleatorio se presentará un mensaje de
+	// felicitacion, y si no se mostrará un mensaje de derrota hasta que los 3 intentos se acaben
+	
+	Escribir "EJERCICIO 6";
+	Definir numAleatorio Como Entero;
+	numAleatorio <- Aleatorio(0,10);
+	Definir numUsuario Como Entero;
+	Definir intentos Como Entero;
+	intentos <- 3;
+	Mientras intentos > 0 Hacer
+		Escribir "Ingresa un número del 0 al 10"
+		Leer numUsuario;
+		Si  numAleatorio = numUsuario Entonces
+			Escribir "Wow, eres genial, el número es correcto!, el número es: ", numAleatorio;
+		SiNo
+			intentos = intentos - 1;
+			Escribir "Perdedor, te quedan ", intentos, " intentos";
+		FinSi
+	Fin Mientras
+	Si intentos = 0 Entonces
+		Escribir "Ya no te quedan intentos, perdiste!";
+	SiNo
+		Escribir "Ganaste!"
+	Fin Si
+FinFuncion
+
+Funcion ejercicio7(0)
+	//ENTRADA: definimos variables:
+	//num Como Entero
+	//PROCESO:
+	//numaleatorio=Aleatorio(1,10)
+	//pedir al usuario que ingrese un numero
+	//leer num
+	//intentos=4
+	//si numaleatorio=num:
+	//presentar "Su número es correcto; el número aleartorio era: " ,numaleartorio " y su número fue: "
+	//sino 
+	//presentar "Su número es incorrecto; el número aleartorio era: ",numaleartorio " y su número fue: " 
+	//FinSi
+	//SALIDA:
+	//segun el numero ingresado se determinara si dicho numero es correcto
+	
+	Escribir "EJERCICIO 7";
+	Definir num, numaleatorio, intentos Como Entero;
+	numaleatorio=Aleatorio(1,10);
+	Escribir "Ingrese un número";
+	leer num;
+	intentos=4;
+	si numaleatorio=num entonces;
+		Escribir "Su número es correcto; el número aleartorio era: " ,numaleatorio, " y su número fue: ", num;
+	SiNo
+		Escribir "Su número es incorrecto; el número aleartorio era: ",numaleatorio, " y su número fue: ", num;
+	FinSi
+FinFuncion
+
+
+Funcion ejercicio8(0)
+	//BOSQUEJO
+	//ENTRADA:
+	// definimos variables:
+	// combo=0?(leer)
+	//PROCESO:
+	//  Presentar "Qué combo desea?";
+	// Presentar "1: combo 1";
+	// Presentar "2: combo 2"; 
+	// Presentar "3: combo 3"; 
+	// Leer combo
+	// Segun combo haremos
+	// 1:
+	//  Presentar "El valor es de $5.000"; 
+	// 2:
+	//  Presentar "El valor es de $2. 500";
+	// 3:
+	//  Presentar "El valor es de $1.000";
+	//  De Otro Modo:
+	// Fin Segun
+	//SALIDA:
+	// dependiendo del combo ingresado se mostrarán los precios
+	Escribir "EJERCICIO 8";
+	Definir combo Como Entero;
+	Escribir "Qué combo desea?";
+	Escribir "1: combo 1";
+	Escribir "2: combo 2"; 
+	Escribir "3: combo 3"; 
+	Leer combo
+	Segun combo Hacer
+		1:
+			Escribir "El valor es de $5.000";
+		2:
+			Escribir "El valor es de $2. 500";
+		3:
+			Escribir "El valor es de $1.000";
+		De Otro Modo:
+			Escribir "No tenemos lo que buscas"
+	Fin Segun
+FinFuncion
+
+Funcion ejercicio9(0)
+	//BOSQUEJO:
+	//ENTRADA: definimos variables:
+	//num=0?, respuesta=0(leer)
+	//PROCESO:
+	//Repetir
+	// num <- Aleatorio(0,10);
+	//   Presentar "El número aleatorio es: " num
+	//   Presentar "Deseas otro número?"
+	//   Presentar respuesta
+	//Hasta Que respuesta = "no"
+	//SALIDA:
+	//Se presentará un número aleatoriamente del 0 al 10, se presenta un mensaje preguntando al usuario si desea
+	//ingresar otro numero, si su respuesta es si se volverá a mostrar el mensaje, pero si el usuario ingresa "no", el programa
+	//terminará
+	Escribir "EJERCICIO 9";
+	Definir num Como Entero;
+	Definir respuesta Como Caracter;
+	Repetir
+		num <- Aleatorio(0,10);
+		Escribir "El número aleatorio es: ", num;
+		Escribir "Deseas otro número?(si no desea ingrese no)";
+		Leer respuesta;
+	Hasta Que respuesta = "no";
+FinFuncion
+
+Funcion ejercicio10(0)
+	//BOSQUEJO:
+	// personas=" ", i=0?
+	//PROCESO:
+	//Dimension personas(4) 
+	// esta variable almacenará 3 nombres,se coloca 4 porque
+	//los índices de los arreglos comienzan desde 0. Eso significa que, si tenemos un arreglo de 3, los índices válidos
+	//son persona1 y 2, no 1, 2 y 3, por esa razón se coloca "personas(4)"
+	//personas(1) <- "Carlos"  
+	//personas(2) <- "Maria"  
+	//personas(3) <- "Jean"  
+	//Para i <- 1 Hasta 3 Con Paso 1 Hacer
+	//    Escribir "El nombre del arreglo es: ", personas(i)
+	//Fin Para
+	//SALIDA:
+	//La variable inventada(i) va a tomar el valor de 1, es decir que con cada repeticion  se le va a sumar 1 a la i, 
+	//hasta llegar a 3 y terminará la repeticion 
+	Escribir "EJERCICIO 10";
+	Definir personas Como Caracter;
+	Definir i Como Entero;
+	Dimension personas(4);
+	personas(1) <- "Kevin" ; 
+	personas(2) <- "Maria";
+	personas(3) <- "Jean";
+	Para i <- 1 Hasta 3 Con Paso 1 Hacer
+		Escribir "El nombre del arreglo es: ", personas(i);
+	Fin Para
+FinFuncion
+
+
+
+//Se va a ejecutar una accion que sera llamada dentro del algoritmo
+//ENTRADA:
+//Le colocamos nombre y los argumentos son la cantidad de datos que le vamos a pasar a la funcion 
+//definimos variables:
+//dato1=0?(leer), dato2=0?(leer), resultado=0?(calcular)
+//PROCESO
+//Presentar 
+//"El resultado es: ", dato1 + dato2
+//SALIDA:
+//segun los dos valores ingresados se mostrara el resulatdo de la suma de esos dos
+Funcion ejercicio11(0)
+	Escribir "EJERCICIO 11"
+	Definir dato1, dato2, resultado Como Entero  
+	Escribir "Ingrese un dato"
+	Leer dato1
+	Escribir "Ingrese otro dato"
+	Leer dato2
+	resultado <- dato1 + dato2  
+	Escribir "El resultado es: ", resultado
+Fin Funcion
+
+
+Algoritmo ejerciciosVideos
+	ejercicio1_video1(0)
+	ejercicio1(0)
+	ejercicio2(0) 
+	ejercicio3(0)
+	ejercicio4(0)
+	ejercicio5(0)
+	ejercicio6(0)
+	ejercicio7(0)
+	ejercicio8(0)
+	ejercicio9(0)
+	ejercicio10(0)
+	ejercicio11(0)
+	
+FinAlgoritmo
